@@ -1,0 +1,27 @@
+{
+  "block.swamp-tweaks.muddy_grass_block": "Muddy Grass Block",
+
+  "item.swamp-tweaks.swamp_sign": "Swamp Sign",
+  "item.swamp-tweaks.swamp_hanging_sign": "Swamp Hanging Sign",
+  "item.swamp-tweaks.swamp_boat": "Swamp Boat",
+  "item.swamp-tweaks.swamp_chest_boat": "Swamp Boat with Chest",
+  "entity.swamp-tweaks.swamp_chest_boat": "Swamp Boat with Chest",
+
+  "block.swamp-tweaks.swamp_log": "Swamp Log",
+  "block.swamp-tweaks.swamp_wood": "Swamp Wood",
+  "block.swamp-tweaks.stripped_swamp_log": "Stripped Swamp Log",
+  "block.swamp-tweaks.stripped_swamp_wood": "Stripped Swamp Wood",
+
+  "block.swamp-tweaks.swamp_planks": "Swamp Planks",
+  "block.swamp-tweaks.swamp_stairs": "Swamp Stairs",
+  "block.swamp-tweaks.swamp_slab": "Swamp Slab",
+  "block.swamp-tweaks.swamp_button": "Swamp Button",
+  "block.swamp-tweaks.swamp_pressure_plate": "Swamp Pressure Plate",
+  "block.swamp-tweaks.swamp_fence": "Swamp Fence",
+  "block.swamp-tweaks.swamp_fence_gate": "Swamp Fence Gate",
+  "block.swamp-tweaks.swamp_door": "Swamp Door",
+  "block.swamp-tweaks.swamp_trapdoor": "Swamp Trapdoor",
+
+  "block.swamp-tweaks.swamp_leaves": "Swamp Leaves",
+  "block.swamp-tweaks.swamp_sapling": "Swamp Sapling"
+}

@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "swamp-tweaks:block/muddy_grass_block"
+      },
+      {
+        "model": "swamp-tweaks:block/muddy_grass_block",
+        "y": 90
+      },
+      {
+        "model": "swamp-tweaks:block/muddy_grass_block",
+        "y": 180
+      },
+      {
+        "model": "swamp-tweaks:block/muddy_grass_block",
+        "y": 270
+      }
+    ],
+    "snowy=true": {
+      "model": "swamp-tweaks:block/muddy_grass_block_snow"
+    }
+  }
+}

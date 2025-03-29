@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "swamp-tweaks:block/swamp_slab"
+    },
+    "type=double": {
+      "model": "swamp-tweaks:block/swamp_planks"
+    },
+    "type=top": {
+      "model": "swamp-tweaks:block/swamp_slab_top"
+    }
+  }
+}

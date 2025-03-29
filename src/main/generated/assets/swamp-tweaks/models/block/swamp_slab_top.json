@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "swamp-tweaks:block/swamp_planks",
+    "side": "swamp-tweaks:block/swamp_planks",
+    "top": "swamp-tweaks:block/swamp_planks"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "swamp-tweaks:block/swamp_planks"
+  }
+}

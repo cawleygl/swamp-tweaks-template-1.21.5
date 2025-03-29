@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "swamp-tweaks:block/stripped_swamp_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "swamp-tweaks:block/stripped_swamp_log"
+    },
+    "axis=z": {
+      "model": "swamp-tweaks:block/stripped_swamp_log_horizontal",
+      "x": 90
+    }
+  }
+}

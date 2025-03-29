@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "swamp-tweaks:block/stripped_swamp_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "swamp-tweaks:block/stripped_swamp_wood"
+    },
+    "axis=z": {
+      "model": "swamp-tweaks:block/stripped_swamp_wood",
+      "x": 90
+    }
+  }
+}

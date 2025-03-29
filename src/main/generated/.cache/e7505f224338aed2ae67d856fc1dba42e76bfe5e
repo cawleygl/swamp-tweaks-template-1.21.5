@@ -1,0 +1,19 @@
+// 1.21.5	-999999999-01-01T00:00:00	Swamp Tweaks/Block Loot Tables
+042c0d335382dd4849cb12f4528885a9d16d4abf data/swamp-tweaks/loot_table/blocks/potted_swamp_sapling.json
+75b62e49a8223efe25380e6032116906cea96bf7 data/swamp-tweaks/loot_table/blocks/stripped_swamp_log.json
+c8849ddb2afcb5f49461781a298c808fdf1db04f data/swamp-tweaks/loot_table/blocks/stripped_swamp_wood.json
+5e20d28d08a2b5d9e8050d76e3229c65a4936dc3 data/swamp-tweaks/loot_table/blocks/swamp_button.json
+1e0f39f0c93daccd463a4f90b53f927c3badacd8 data/swamp-tweaks/loot_table/blocks/swamp_door.json
+64bb3760cd3aaf080aad00c32b0ee1ef2ecc7ebc data/swamp-tweaks/loot_table/blocks/swamp_fence.json
+d41e50963129aa17611b6d8d87a346753062c4bb data/swamp-tweaks/loot_table/blocks/swamp_fence_gate.json
+49282cca4490dcad75c05a4caabd1b1dcad9355b data/swamp-tweaks/loot_table/blocks/swamp_hanging_sign.json
+0992280dfe971f3f6671e7357060e62b8839bd6d data/swamp-tweaks/loot_table/blocks/swamp_leaves.json
+d238df077ce9cfabe41a763ce33276326f0bb5a2 data/swamp-tweaks/loot_table/blocks/swamp_log.json
+b2466e19c6c4cfd439440bea211a9e64a69045f1 data/swamp-tweaks/loot_table/blocks/swamp_planks.json
+ad57da36b2416b2d85fd37b9bf30d46e0e568838 data/swamp-tweaks/loot_table/blocks/swamp_pressure_plate.json
+08940136333a0627b4e37731c5d512aa598f6457 data/swamp-tweaks/loot_table/blocks/swamp_sapling.json
+6c94d45e0df682a05a614c9e5f82b136eaa4e928 data/swamp-tweaks/loot_table/blocks/swamp_slab.json
+3371a1d60abf9137907997736b1c6d6f72317b93 data/swamp-tweaks/loot_table/blocks/swamp_stairs.json
+5333ea5d6969feb21a705f31e3c290f51128b29e data/swamp-tweaks/loot_table/blocks/swamp_standing_sign.json
+8f3862571a190d668533dbec05e2214f6dead654 data/swamp-tweaks/loot_table/blocks/swamp_trapdoor.json
+c0d3332833f9f38cb55ca985e5fb1e1a8c4b1b4c data/swamp-tweaks/loot_table/blocks/swamp_wood.json
