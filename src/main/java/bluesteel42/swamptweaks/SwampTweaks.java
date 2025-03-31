@@ -6,6 +6,7 @@ import bluesteel42.swamptweaks.item.ModItems;
 import bluesteel42.swamptweaks.registries.ModRegistries;
 import bluesteel42.swamptweaks.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.world.gen.structure.Structure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
