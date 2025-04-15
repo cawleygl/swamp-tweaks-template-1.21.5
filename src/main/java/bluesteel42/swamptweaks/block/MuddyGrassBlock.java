@@ -126,39 +126,4 @@ public class MuddyGrassBlock extends SpreadableBlock implements Fertilizable {
         return 0.2F;
     }
 
-    private static boolean canSurvive(BlockState state, WorldView world, BlockPos pos) {
-        BlockPos blockPos = pos.up();
-        BlockState blockState = world.getBlockState(blockPos);
-        if (blockState.isOf(Blocks.SNOW) && (Integer)blockState.get(SnowBlock.LAYERS) == 1) {
-            return true;
-        } else if (blockState.getFluidState().getLevel() == 8) {
-            return false;
-        } else {
-            int i = ChunkLightProvider.getRealisticOpacity(state, blockState, Direction.UP, blockState.getOpacity());
-            return i < 15;
-        }
-    }
-
-    private static boolean canSpread(BlockState state, WorldView world, BlockPos pos) {
-        BlockPos blockPos = pos.up();
-        return canSurvive(state, world, pos) && !world.getFluidState(blockPos).isIn(FluidTags.WATER);
-    }
-
-    @Override
-    protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (!canSurvive(state, world, pos)) {
-            world.setBlockState(pos, Blocks.MUD.getDefaultState());
-        } else {
-            if (world.getLightLevel(pos.up()) >= 9) {
-                BlockState mudBlockState = ModBlocks.MUDDY_GRASS_BLOCK.getDefaultState();
-                for (int i = 0; i < 4; i++) {
-                    BlockPos blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
-                    if (world.getBlockState(blockPos).isOf(Blocks.MUD) && canSpread(mudBlockState, world, blockPos)) {
-                        world.setBlockState(blockPos, mudBlockState.with(SNOWY, isSnow(world.getBlockState(blockPos.up()))));
-                    }
-                }
-            }
-        }
-    }
-
 }

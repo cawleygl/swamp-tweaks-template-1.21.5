@@ -1,7 +1,7 @@
 // 1.21.5	-999999999-01-01T00:00:00	Swamp Tweaks/Tags for minecraft:item
 a133b3db2836d8187b4765d6caea7e8022cf9b63 data/minecraft/tags/item/boats.json
 969ef2daab65c1276aaa426037831123246ebb32 data/minecraft/tags/item/chest_boats.json
-6a4d94ba08c1e48bbc7afbad837ec626d8f04a0e data/minecraft/tags/item/dirt.json
+7af12230c5792932717af3a6bd72a2ea09cb4448 data/minecraft/tags/item/dirt.json
 8d7c29358326f748356f3f8e9839df9cc37ff687 data/minecraft/tags/item/fence_gates.json
 061b5015bc28fd19e479365b7d6c24e66ee3b84f data/minecraft/tags/item/hanging_signs.json
 5791356e91b50eec821ea2a5547e9b05eaf6f172 data/minecraft/tags/item/leaves.json

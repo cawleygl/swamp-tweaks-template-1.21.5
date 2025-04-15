@@ -1,20 +1,17 @@
 package bluesteel42.swamptweaks.mixin;
 
 import bluesteel42.swamptweaks.block.ModBlocks;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.enums.StairShape;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.mob.WitchEntity;
 import net.minecraft.entity.passive.CatEntity;
 import net.minecraft.structure.ShiftableStructurePiece;
 import net.minecraft.structure.StructurePieceType;
-import net.minecraft.structure.StructurePiecesCollector;
 import net.minecraft.structure.SwampHutGenerator;
 import net.minecraft.util.math.BlockBox;
 import net.minecraft.util.math.BlockPos;
@@ -24,24 +21,11 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.StructureAccessor;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
-import net.minecraft.world.gen.structure.Structure;
-import net.minecraft.world.gen.structure.SwampHutStructure;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.gen.Accessor;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import javax.swing.text.html.parser.Entity;
-
-//@Mixin(SwampHutStructure.class)
-//public class SwampWoodHutMixin {
-//	@Inject(method = "addPieces", at = @At("HEAD"), cancellable = true)
-//	private static void injected(StructurePiecesCollector collector, Structure.Context context, CallbackInfo ci) {
-//		collector.addPiece(new SwampWoodHutGenerator(context.random(), context.chunkPos().getStartX(), context.chunkPos().getStartZ()));
-//		ci.cancel();
-//	}
-//}
 @Mixin(SwampHutGenerator.class)
 public class SwampWoodHutMixin extends ShiftableStructurePiece {
 	protected SwampWoodHutMixin(StructurePieceType type, int x, int y, int z, int width, int height, int depth, Direction orientation) {

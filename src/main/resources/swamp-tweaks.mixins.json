@@ -3,10 +3,16 @@
 	"package": "bluesteel42.swamptweaks.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"MuddyGrassBlocksAndMyceliumWithPotionMixin",
+		"SpreadableToMudBlocksMixin",
 		"HasCatAccessor",
 		"HasWitchAccessor",
-		"MuddyGrassBlocksWithPotionMixin",
-		"SwampWoodHutMixin"
+		"SwampWoodHutMixin",
+		"TimerAccessor",
+		"MobAccessor",
+		"EDIBLE_PREDICATEAccessor",
+		"WorldAccessor",
+		"SheepEatMuddyGrassMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
