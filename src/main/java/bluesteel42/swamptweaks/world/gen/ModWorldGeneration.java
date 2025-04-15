@@ -10,6 +10,5 @@ public class ModWorldGeneration {
     public static void generateModWorldGen() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP), GenerationStep.Feature.LOCAL_MODIFICATIONS, ModPlacedFeatures.SWAMP_MUD_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP), GenerationStep.Feature.LOCAL_MODIFICATIONS, ModPlacedFeatures.SWAMP_MUDDY_GRASS_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP), GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SWAMP_HUGE_MUSHROOMS_PLACED_KEY);
     }
 }

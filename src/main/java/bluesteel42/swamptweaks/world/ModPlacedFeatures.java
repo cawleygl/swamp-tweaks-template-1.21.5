@@ -1,6 +1,8 @@
 package bluesteel42.swamptweaks.world;
 
 import bluesteel42.swamptweaks.SwampTweaks;
+import bluesteel42.swamptweaks.block.ModBlocks;
+import com.sun.source.tree.Tree;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -8,6 +10,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.HeightmapPlacementModifier;
@@ -17,12 +20,28 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
+    public static final RegistryKey<PlacedFeature> SWAMP_TREE_PLACED_KEY = registerKey("swamp_tree");
     public static final RegistryKey<PlacedFeature> SWAMP_MUD_PLACED_KEY = registerKey("swamp_mud");
     public static final RegistryKey<PlacedFeature> SWAMP_MUDDY_GRASS_PLACED_KEY = registerKey("swamp_muddy_grass");
-    public static final RegistryKey<PlacedFeature> SWAMP_HUGE_MUSHROOMS_PLACED_KEY = registerKey("swamp_huge_mushrooms");
+    public static final RegistryKey<PlacedFeature> SWAMP_HUGE_RED_MUSHROOM_PLACED_KEY = registerKey("swamp_huge_red_mushroom");
+    public static final RegistryKey<PlacedFeature> SWAMP_HUGE_BROWN_MUSHROOM_PLACED_KEY = registerKey("swamp_huge_brown_mushroom");
+    public static final RegistryKey<PlacedFeature> FALLEN_SWAMP_TREE_PLACED_KEY = registerKey("fallen_swamp_tree");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
+        register(context, SWAMP_TREE_PLACED_KEY, configuredFeatures.getOrThrow(TreeConfiguredFeatures.SWAMP_OAK),
+                List.of(PlacedFeatures.wouldSurvive(ModBlocks.SWAMP_SAPLING))
+        );
+        register(context, SWAMP_HUGE_RED_MUSHROOM_PLACED_KEY, configuredFeatures.getOrThrow(TreeConfiguredFeatures.HUGE_RED_MUSHROOM),
+                List.of(PlacedFeatures.wouldSurvive(ModBlocks.SWAMP_SAPLING))
+        );
+        register(context, SWAMP_HUGE_BROWN_MUSHROOM_PLACED_KEY, configuredFeatures.getOrThrow(TreeConfiguredFeatures.HUGE_BROWN_MUSHROOM),
+                List.of(PlacedFeatures.wouldSurvive(ModBlocks.SWAMP_SAPLING))
+        );
+        register(context, FALLEN_SWAMP_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FALLEN_SWAMP_TREE_KEY),
+                List.of(PlacedFeatures.wouldSurvive(ModBlocks.SWAMP_SAPLING))
+        );
 
         register(context, SWAMP_MUD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SWAMP_MUD_KEY),
                 ModPlacedFeaturesModifiers.modifiersWithCount(256,
@@ -35,11 +54,6 @@ public class ModPlacedFeatures {
                 )
         );
 
-        register(context, SWAMP_HUGE_MUSHROOMS_PLACED_KEY, configuredFeatures.getOrThrow(VegetationConfiguredFeatures.MUSHROOM_ISLAND_VEGETATION),
-                ModPlacedFeaturesModifiers.modifiersWithRarity(6,
-                        HeightmapPlacementModifier.of(Heightmap.Type.WORLD_SURFACE)
-                )
-        );
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

@@ -1,6 +1,11 @@
 // 1.21.5	-999999999-01-01T00:00:00	Swamp Tweaks/
+0f6a72c657dffec63518309cf7e32e663ea30229 data/swamp-tweaks/worldgen/configured_feature/fallen_swamp_tree.json
 02bb5b236cdd733883629ca79e0c7ab8b31f62d6 data/swamp-tweaks/worldgen/configured_feature/swamp_mud.json
 4b08fce90014e086b10765e6e9c8b5953e58700f data/swamp-tweaks/worldgen/configured_feature/swamp_muddy_grass.json
-a8af6cf47f15f7e6cb7742979be28a3aba4017d3 data/swamp-tweaks/worldgen/placed_feature/swamp_huge_mushrooms.json
+96a6ce3957e76d69a8e5bab4ba78293959e516e0 data/swamp-tweaks/worldgen/configured_feature/trees_swamp.json
+a14e0912ae6f7676e81086a478f448a7227b511b data/swamp-tweaks/worldgen/placed_feature/fallen_swamp_tree.json
+ad290d9f8a2d0845a44710edc63b3204f301efde data/swamp-tweaks/worldgen/placed_feature/swamp_huge_brown_mushroom.json
+92e209c760d9544d47338865f2bbe9e56e614655 data/swamp-tweaks/worldgen/placed_feature/swamp_huge_red_mushroom.json
 a52e6fcb5b04033a4d6b92956ce13c146f31b733 data/swamp-tweaks/worldgen/placed_feature/swamp_mud.json
 6d38e5019d0683ddf9a6a783e962527ae14f08c6 data/swamp-tweaks/worldgen/placed_feature/swamp_muddy_grass.json
+7229f0c5a52d9b2f0479a1a6f5d49691b6940c4d data/swamp-tweaks/worldgen/placed_feature/swamp_tree.json
