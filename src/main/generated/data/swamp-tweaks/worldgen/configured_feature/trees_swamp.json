@@ -12,7 +12,7 @@
         "feature": "swamp-tweaks:swamp_huge_brown_mushroom"
       },
       {
-        "chance": 0.5,
+        "chance": 0.0125,
         "feature": "swamp-tweaks:fallen_swamp_tree"
       }
     ]
