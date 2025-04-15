@@ -1,6 +1,5 @@
 package bluesteel42.swamptweaks.mixin;
 
-import bluesteel42.swamptweaks.SwampTweaks;
 import bluesteel42.swamptweaks.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
