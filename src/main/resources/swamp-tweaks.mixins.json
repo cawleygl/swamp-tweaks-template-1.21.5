@@ -3,7 +3,7 @@
 	"package": "bluesteel42.swamptweaks.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"MuddyGrassBlocksAndMyceliumWithPotionMixin",
+		"MuddyGrassTypeBlocksWithWaterBottleMixin",
 		"SpreadableToMudBlocksMixin",
 		"HasCatAccessor",
 		"HasWitchAccessor",

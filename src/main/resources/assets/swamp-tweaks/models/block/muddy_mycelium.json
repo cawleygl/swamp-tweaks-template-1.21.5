@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
+    "particle":"swamp-tweaks:block/muddy_mycelium_top",
     "bottom": "minecraft:block/mud",
     "side": "swamp-tweaks:block/muddy_mycelium_side",
     "top": "swamp-tweaks:block/muddy_mycelium_top"

@@ -41,6 +41,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.SNOW_LAYER_CAN_SURVIVE_ON).add(ModBlocks.MUDDY_MYCELIUM);
         getOrCreateTagBuilder(BlockTags.MUSHROOM_GROW_BLOCK).add(ModBlocks.MUDDY_MYCELIUM);
 
+        getOrCreateTagBuilder(BlockTags.BIG_DRIPLEAF_PLACEABLE).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.DIRT).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.FOXES_SPAWNABLE_ON).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.MUSHROOM_GROW_BLOCK).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.SNIFFER_DIGGABLE_BLOCK).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.VALID_SPAWN).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.WOLVES_SPAWNABLE_ON).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.MANGROVE_LOGS_CAN_GROW_THROUGH).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.MANGROVE_ROOTS_CAN_GROW_THROUGH).add(ModBlocks.MUDDY_PODZOL);
+        getOrCreateTagBuilder(BlockTags.SNOW_LAYER_CAN_SURVIVE_ON).add(ModBlocks.MUDDY_PODZOL);
+
         getOrCreateTagBuilder(ModTags.Blocks.SWAMP_LOGS)
                 .add(ModBlocks.SWAMP_LOG)
                 .add(ModBlocks.SWAMP_WOOD)

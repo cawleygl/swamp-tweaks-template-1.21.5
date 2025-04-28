@@ -20,6 +20,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ItemTags.DIRT).add(ModBlocks.MUDDY_GRASS_BLOCK.asItem());
         getOrCreateTagBuilder(ItemTags.DIRT).add(ModBlocks.MUDDY_MYCELIUM.asItem());
+        getOrCreateTagBuilder(ItemTags.DIRT).add(ModBlocks.MUDDY_PODZOL.asItem());
 
         getOrCreateTagBuilder(ModTags.Items.SWAMP_LOGS)
                 .add(ModBlocks.SWAMP_LOG.asItem())
