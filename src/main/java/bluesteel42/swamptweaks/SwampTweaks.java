@@ -5,6 +5,7 @@ import bluesteel42.swamptweaks.entity.ModBoats;
 import bluesteel42.swamptweaks.item.ModItems;
 import bluesteel42.swamptweaks.registries.ModRegistries;
 import bluesteel42.swamptweaks.world.gen.ModWorldGeneration;
+import bluesteel42.swamptweaks.world.tree.ModTreeBuilders;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.world.gen.structure.Structure;
 import org.slf4j.Logger;
@@ -26,6 +27,7 @@ public class SwampTweaks implements ModInitializer {
 		ModBlocks.initialize();
 		ModItems.initialize();
 		ModBoats.initialize();
+		ModTreeBuilders.initialize();
 		ModWorldGeneration.generateModWorldGen();
 		ModRegistries.registerStrippables();
 		ModRegistries.registerCompostables();

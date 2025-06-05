@@ -4,6 +4,10 @@
     "default": "swamp-tweaks:swamp_tree",
     "features": [
       {
+        "chance": 0.1,
+        "feature": "swamp-tweaks:swamp_willow"
+      },
+      {
         "chance": 0.05,
         "feature": "swamp-tweaks:swamp_huge_red_mushroom"
       },

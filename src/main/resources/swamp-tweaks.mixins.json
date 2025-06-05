@@ -1,20 +1,21 @@
 {
-	"required": true,
-	"package": "bluesteel42.swamptweaks.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"MuddyGrassTypeBlocksWithWaterBottleMixin",
-		"SpreadableToMudBlocksMixin",
-		"HasCatAccessor",
-		"HasWitchAccessor",
-		"SwampWoodHutMixin",
-		"TimerAccessor",
-		"MobAccessor",
-		"EDIBLE_PREDICATEAccessor",
-		"WorldAccessor",
-		"SheepEatMuddyGrassMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "bluesteel42.swamptweaks.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EDIBLE_PREDICATEAccessor",
+    "HasCatAccessor",
+    "HasWitchAccessor",
+    "MobAccessor",
+    "MuddyGrassTypeBlocksWithWaterBottleMixin",
+    "RegisterSwampTrunkPlacerMixin",
+    "SheepEatMuddyGrassMixin",
+    "SpreadableToMudBlocksMixin",
+    "SwampWoodHutMixin",
+    "TimerAccessor",
+    "WorldAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }
