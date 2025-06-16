@@ -79,7 +79,14 @@ public class SwampTrunkPlacer extends TrunkPlacer {
                 if (this.getAndSetState(world, replacer, random, new BlockPos(startPos.getX(), j, startPos.getZ()), config)) {
                     List<Direction> xDirections = Direction.Type.HORIZONTAL.getShuffled(random);
                     for (int k = 0; k < this.lowerNumberOfBranches.get(random); k++) {
-                        this.generateLowerBranches(world, replacer, random, height - diverge1, config, list, new BlockPos.Mutable().set(startPos.getX(), j, startPos.getZ()), j, xDirections.get(k), this.lowerBranchSteps.get(random));
+                        int shiftChance = random.nextInt(5);
+                        int yPos = j;
+                        if (shiftChance == 0) {
+                            yPos++;
+                        } else if (shiftChance == 1) {
+                            yPos--;
+                        }
+                        this.generateLowerBranches(world, replacer, random, height - diverge1, config, list, new BlockPos.Mutable().set(startPos.getX(), j, startPos.getZ()), yPos, xDirections.get(k), this.lowerBranchSteps.get(random));
                     }
                 }
             } else if (i == diverge2) {
@@ -88,7 +95,12 @@ public class SwampTrunkPlacer extends TrunkPlacer {
                 if (this.getAndSetState(world, replacer, random, new BlockPos(startPos.getX(), j, startPos.getZ()), config)) {
                     List<Direction> xDirections = Direction.Type.HORIZONTAL.getShuffled(random);
                     for (int k = 0; k < this.upperNumberOfBranches.get(random); k++) {
-                        this.generateUpperBranches(world, replacer, random, height - diverge2, config, list, new BlockPos.Mutable().set(startPos.getX(), j, startPos.getZ()), j, xDirections.get(k));
+                        int shiftChance = random.nextInt(5);
+                        int yPos = j;
+                        if (shiftChance == 0) {
+                            yPos--;
+                        }
+                        this.generateUpperBranches(world, replacer, random, height - diverge2, config, list, new BlockPos.Mutable().set(startPos.getX(), j, startPos.getZ()), yPos, xDirections.get(k));
                     }
                 }
             } else {
