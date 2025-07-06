@@ -1,5 +1,6 @@
 package bluesteel42.swamptweaks.datagen;
 
+import bluesteel42.swamptweaks.SwampTweaks;
 import bluesteel42.swamptweaks.block.ModBlocks;
 import bluesteel42.swamptweaks.entity.ModBoats;
 import bluesteel42.swamptweaks.item.ModItems;
@@ -110,6 +111,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return "Recipes";
+        return SwampTweaks.MOD_ID + "Recipes";
     }
 }
