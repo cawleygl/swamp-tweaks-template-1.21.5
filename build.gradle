@@ -50,6 +50,8 @@ processResources {
 	filesMatching("fabric.mod.json") {
 		expand "version": inputs.properties.version
 	}
+
+	duplicatesStrategy "include"
 }
 
 tasks.withType(JavaCompile).configureEach {
