@@ -102,7 +102,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("wooden_sign")
                         .criterion("has_planks", conditionsFromItem(ModBlocks.SWAMP_PLANKS))
                         .offerTo(exporter);
-                offerHangingSignRecipe(ModBlocks.SWAMP_HANGING_SIGN, ModBlocks.STRIPPED_SWAMP_LOG);
+                offerHangingSignRecipe(ModItems.SWAMP_HANGING_SIGN, ModBlocks.STRIPPED_SWAMP_LOG);
                 offerBoatRecipe(ModBoats.SWAMP_BOAT, ModBlocks.SWAMP_PLANKS);
                 offerChestBoatRecipe(ModBoats.SWAMP_CHEST_BOAT, ModBoats.SWAMP_BOAT);
             }

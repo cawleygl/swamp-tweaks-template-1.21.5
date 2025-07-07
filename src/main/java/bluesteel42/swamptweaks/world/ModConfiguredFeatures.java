@@ -4,15 +4,11 @@ import bluesteel42.swamptweaks.SwampTweaks;
 import bluesteel42.swamptweaks.block.ModBlocks;
 import bluesteel42.swamptweaks.world.tree.SwampTrunkPlacer;
 import com.google.common.collect.ImmutableList;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.entry.RegistryEntryList;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.Pool;
@@ -26,7 +22,6 @@ import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.AttachedToLogsTreeDecorator;
 import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
-import net.minecraft.world.gen.trunk.UpwardsBranchingTrunkPlacer;
 
 import java.util.List;
 

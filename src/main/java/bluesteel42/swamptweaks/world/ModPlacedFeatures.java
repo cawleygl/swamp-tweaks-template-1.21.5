@@ -2,18 +2,14 @@ package bluesteel42.swamptweaks.world;
 
 import bluesteel42.swamptweaks.SwampTweaks;
 import bluesteel42.swamptweaks.block.ModBlocks;
-import com.sun.source.tree.Tree;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.HeightmapPlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
 import java.util.List;

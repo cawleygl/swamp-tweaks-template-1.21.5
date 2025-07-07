@@ -12,28 +12,32 @@ import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.data.family.BlockFamily;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 import java.util.function.Function;
 
 public class ModBlocks {
 
-    public static final Block MUDDY_GRASS_BLOCK = registerNonOpaqueBlock("muddy_grass_block", MuddyGrassBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.PALE_GREEN).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.MUD));
-    public static final Block MUDDY_MYCELIUM = registerNonOpaqueBlock("muddy_mycelium", MuddyMyceliumBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.PURPLE).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.MUD));
-    public static final Block MUDDY_PODZOL = registerNonOpaqueBlock("muddy_podzol", SnowyBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.SPRUCE_BROWN).ticksRandomly().strength(0.5F).sounds(BlockSoundGroup.MUD));
+    public static final Block MUDDY_GRASS_BLOCK = register("muddy_grass_block", MuddyGrassBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.PALE_GREEN).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.MUD), true, true);
+    public static final Block MUDDY_MYCELIUM = register("muddy_mycelium", MuddyMyceliumBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.PURPLE).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.MUD), true, true);
+    public static final Block MUDDY_PODZOL = register("muddy_podzol", SnowyBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.SPRUCE_BROWN).ticksRandomly().strength(0.5F).sounds(BlockSoundGroup.MUD), true, true);
 
-    public static final Block SWAMP_LOG = registerBlock("swamp_log", PillarBlock::new, Blocks.createLogSettings(MapColor.TERRACOTTA_CYAN, MapColor.GREEN, BlockSoundGroup.WOOD));
-    public static final Block SWAMP_WOOD = registerBlock("swamp_wood", PillarBlock::new, Blocks.createLogSettings(MapColor.GREEN, MapColor.GREEN, BlockSoundGroup.WOOD));
-    public static final Block STRIPPED_SWAMP_LOG = registerBlock("stripped_swamp_log", PillarBlock::new, Blocks.createLogSettings(MapColor.TERRACOTTA_CYAN, MapColor.TERRACOTTA_CYAN, BlockSoundGroup.WOOD));
-    public static final Block STRIPPED_SWAMP_WOOD = registerBlock("stripped_swamp_wood", PillarBlock::new, Blocks.createLogSettings(MapColor.TERRACOTTA_CYAN, MapColor.TERRACOTTA_CYAN, BlockSoundGroup.WOOD));
-    public static final Block SWAMP_PLANKS = registerBlock(
+    public static final Block SWAMP_LOG = register("swamp_log", PillarBlock::new, Blocks.createLogSettings(MapColor.TERRACOTTA_CYAN, MapColor.GREEN, BlockSoundGroup.WOOD), true, false);
+    public static final Block SWAMP_WOOD = register("swamp_wood", PillarBlock::new, Blocks.createLogSettings(MapColor.GREEN, MapColor.GREEN, BlockSoundGroup.WOOD), true, false);
+    public static final Block STRIPPED_SWAMP_LOG = register("stripped_swamp_log", PillarBlock::new, Blocks.createLogSettings(MapColor.TERRACOTTA_CYAN, MapColor.TERRACOTTA_CYAN, BlockSoundGroup.WOOD), true, false);
+    public static final Block STRIPPED_SWAMP_WOOD = register("stripped_swamp_wood", PillarBlock::new, Blocks.createLogSettings(MapColor.TERRACOTTA_CYAN, MapColor.TERRACOTTA_CYAN, BlockSoundGroup.WOOD), true, false);
+    public static final Block SWAMP_PLANKS = register(
             "swamp_planks",
             Block::new,
             AbstractBlock.Settings.create()
@@ -41,14 +45,18 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F)
                     .sounds(BlockSoundGroup.WOOD)
-                    .burnable()
+                    .burnable(),
+            true,
+            false
     );
-    public static final Block SWAMP_STAIRS = registerBlock(
+    public static final Block SWAMP_STAIRS = register(
             "swamp_stairs",
             settings -> new StairsBlock(SWAMP_PLANKS.getDefaultState(), settings),
-            AbstractBlock.Settings.copy(SWAMP_PLANKS)
+            AbstractBlock.Settings.copy(SWAMP_PLANKS),
+            true,
+            false
     );
-    public static final Block SWAMP_SLAB = registerBlock(
+    public static final Block SWAMP_SLAB = register(
             "swamp_slab",
             SlabBlock::new,
             AbstractBlock.Settings.create()
@@ -56,17 +64,21 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F)
                     .sounds(BlockSoundGroup.WOOD)
-                    .burnable()
+                    .burnable(),
+            true,
+            false
     );
-    public static final Block SWAMP_BUTTON = registerBlock(
+    public static final Block SWAMP_BUTTON = register(
             "swamp_button",
             settings -> new ButtonBlock(BlockSetType.OAK, 30, settings),
             AbstractBlock.Settings.create()
                     .noCollision()
                     .strength(0.5F)
-                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true,
+            false
     );
-    public static final Block SWAMP_PRESSURE_PLATE = registerBlock(
+    public static final Block SWAMP_PRESSURE_PLATE = register(
             "swamp_pressure_plate",
             settings -> new PressurePlateBlock(BlockSetType.OAK, settings),
             AbstractBlock.Settings.create()
@@ -76,9 +88,11 @@ public class ModBlocks {
                     .noCollision()
                     .strength(0.5F)
                     .burnable()
-                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true,
+            false
     );
-    public static final Block SWAMP_FENCE = registerBlock(
+    public static final Block SWAMP_FENCE = register(
             "swamp_fence",
             FenceBlock::new,
             AbstractBlock.Settings.create()
@@ -86,9 +100,11 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F)
                     .sounds(BlockSoundGroup.WOOD)
-                    .burnable()
+                    .burnable(),
+            true,
+            false
     );
-    public static final Block SWAMP_FENCE_GATE = registerBlock(
+    public static final Block SWAMP_FENCE_GATE = register(
             "swamp_fence_gate",
             settings -> new FenceGateBlock(WoodType.OAK, settings),
             AbstractBlock.Settings.create()
@@ -96,9 +112,11 @@ public class ModBlocks {
                     .solid()
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F)
-                    .burnable()
+                    .burnable(),
+            true,
+            false
     );
-    public static final Block SWAMP_DOOR = registerNonOpaqueBlock(
+    public static final Block SWAMP_DOOR = register(
             "swamp_door",
             settings -> new DoorBlock(BlockSetType.OAK, settings),
             AbstractBlock.Settings.create()
@@ -107,9 +125,11 @@ public class ModBlocks {
                     .strength(3.0F)
                     .nonOpaque()
                     .burnable()
-                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true,
+            true
     );
-    public static final Block SWAMP_TRAPDOOR = registerNonOpaqueBlock(
+    public static final Block SWAMP_TRAPDOOR = register(
             "swamp_trapdoor",
             settings -> new TrapdoorBlock(BlockSetType.OAK, settings),
             AbstractBlock.Settings.create()
@@ -118,89 +138,86 @@ public class ModBlocks {
                     .strength(3.0F)
                     .nonOpaque()
                     .allowsSpawning(Blocks::never)
-                    .burnable()
+                    .burnable(),
+            true,
+            true
     );
     public static final Identifier SWAMP_SIGN_TEXTURE = Identifier.of(SwampTweaks.MOD_ID, "entity/signs/swamp");
     public static final Identifier SWAMP_HANGING_SIGN_TEXTURE = Identifier.of(SwampTweaks.MOD_ID, "entity/signs/hanging/swamp");
     public static final Identifier SWAMP_HANGING_GUI_SIGN_TEXTURE = Identifier.of(SwampTweaks.MOD_ID, "textures/gui/hanging_signs/swamp");
-    public static final Block SWAMP_STANDING_SIGN = registerBlockWithoutItem(
+    public static final Block SWAMP_STANDING_SIGN = register(
             "swamp_standing_sign",
             settings -> new TerraformSignBlock(SWAMP_SIGN_TEXTURE, settings),
-            AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
-                    .mapColor(MapColor.TERRACOTTA_CYAN)
+            AbstractBlock.Settings.copy(Blocks.OAK_SIGN).mapColor(MapColor.TERRACOTTA_CYAN),
+            false,
+            false
     );
 
-    public static final Block SWAMP_WALL_SIGN = registerBlockWithoutItem(
+    public static final Block SWAMP_WALL_SIGN = register(
             "swamp_wall_sign",
             settings -> new TerraformWallSignBlock(SWAMP_SIGN_TEXTURE, settings),
-            AbstractBlock.Settings.copy(Blocks.OAK_SIGN).mapColor(MapColor.TERRACOTTA_CYAN).lootTable(SWAMP_STANDING_SIGN.getLootTableKey()).overrideTranslationKey(SWAMP_STANDING_SIGN.getTranslationKey())
+            AbstractBlock.Settings.copy(Blocks.OAK_SIGN).mapColor(MapColor.TERRACOTTA_CYAN).lootTable(SWAMP_STANDING_SIGN.getLootTableKey()).overrideTranslationKey(SWAMP_STANDING_SIGN.getTranslationKey()),
+            false,
+            false
     );
 
-    public static final Block SWAMP_HANGING_SIGN = registerBlockWithoutItem(
+    public static final Block SWAMP_HANGING_SIGN = register(
             "swamp_hanging_sign",
             settings -> new TerraformHangingSignBlock(SWAMP_HANGING_SIGN_TEXTURE, SWAMP_HANGING_GUI_SIGN_TEXTURE, settings),
-            AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
-                    .mapColor(MapColor.TERRACOTTA_CYAN)
+            AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_CYAN),
+            false,
+            false
     );
 
-    public static final Block SWAMP_WALL_HANGING_SIGN = registerBlockWithoutItem(
+    public static final Block SWAMP_WALL_HANGING_SIGN = register(
             "swamp_hanging_wall_sign",
             settings -> new TerraformWallHangingSignBlock(SWAMP_HANGING_SIGN_TEXTURE, SWAMP_HANGING_GUI_SIGN_TEXTURE, settings),
-            AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_CYAN).lootTable(SWAMP_HANGING_SIGN.getLootTableKey()).overrideTranslationKey(SWAMP_HANGING_SIGN.getTranslationKey())
+            AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_CYAN).lootTable(SWAMP_HANGING_SIGN.getLootTableKey()).overrideTranslationKey(SWAMP_HANGING_SIGN.getTranslationKey()),
+            false,
+            false
     );
 
     public static final BlockFamily SWAMP_SIGN_FAMILY = BlockFamilies.register(ModBlocks.SWAMP_PLANKS)
             .sign(ModBlocks.SWAMP_STANDING_SIGN, ModBlocks.SWAMP_WALL_SIGN)
             .group("wooden").unlockCriterionName("has_planks").build();
 
-    public static final BlockFamily SWAMP_HANGING_SIGN_FAMILY = BlockFamilies.register(ModBlocks.STRIPPED_SWAMP_LOG)
-            .sign(ModBlocks.SWAMP_HANGING_SIGN, ModBlocks.SWAMP_WALL_HANGING_SIGN)
-            .group("wooden").unlockCriterionName("has_planks").build();
-
-    public static final Block SWAMP_LEAVES = registerNonOpaqueBlock(
+    public static final Block SWAMP_LEAVES = register(
             "swamp_leaves",
             settings -> new TintedParticleLeavesBlock(0.01F, settings),
-            Blocks.createLeavesSettings(BlockSoundGroup.GRASS)
+            Blocks.createLeavesSettings(BlockSoundGroup.GRASS),
+            true,
+            true
     );
-    public static final Block SWAMP_SAPLING = registerNonOpaqueBlock(
+    public static final Block SWAMP_SAPLING = register(
             "swamp_sapling",
             settings -> new SaplingBlock(ModSaplingGenerators.SWAMP, settings),
-            AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
+            AbstractBlock.Settings.copy(Blocks.OAK_SAPLING),
+            true,
+            true
     );
-    public static final Block POTTED_SWAMP_SAPLING = registerNonOpaqueBlock(
+    public static final Block POTTED_SWAMP_SAPLING = register(
             "potted_swamp_sapling",
             settings -> new FlowerPotBlock(SWAMP_SAPLING, settings),
-            Blocks.createFlowerPotSettings()
+            Blocks.createFlowerPotSettings(),
+            true,
+            true
     );
 
-    private static Block registerBlock(String path, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        final Identifier identifier = Identifier.of(SwampTweaks.MOD_ID, path);
-        final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
-
-        final Block block = Blocks.register(registryKey, factory, settings);
-        Items.register(block);
-
-        return block;
-    }
-
-    private static Block registerNonOpaqueBlock(String path, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+    private static Block register(String path, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings, boolean registerItem, boolean nonOpaqueBlock) {
         final Identifier identifier = Identifier.of(SwampTweaks.MOD_ID, path);
         final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
 
         final Block block = Blocks.register(registryKey, factory, settings);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+        if (registerItem) {
+            Items.register(block);
+        }
 
-        Items.register(block);
+        if (nonOpaqueBlock) {
+            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+        }
 
         return block;
-    }
-
-    private static Block registerBlockWithoutItem(String path, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        final Identifier identifier = Identifier.of(SwampTweaks.MOD_ID, path);
-        final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
-
-        return Blocks.register(registryKey, factory, settings);
     }
 
     public static void initialize() {

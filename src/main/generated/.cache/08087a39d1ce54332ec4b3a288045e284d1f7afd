@@ -19,7 +19,7 @@ b4501b6653b48950b16fbb738dc5862b0f156b8d assets/swamp-tweaks/blockstates/swamp_s
 e796d18289af2a8f41ef9769ce629bf1747becba assets/swamp-tweaks/blockstates/swamp_trapdoor.json
 b4501b6653b48950b16fbb738dc5862b0f156b8d assets/swamp-tweaks/blockstates/swamp_wall_sign.json
 08134c9f6e1d1ab7c979b5e604c75f8ab4a66de6 assets/swamp-tweaks/blockstates/swamp_wood.json
-b8d0547c68bd680bf66a8639a3382c0482daa0e2 assets/swamp-tweaks/items/muddy_grass_block.json
+f65f9e07b7cef0db263d48e3e855e566c17e753b assets/swamp-tweaks/items/muddy_grass_block.json
 fcbff466013b1f778d54015ea5455c028d2e2af2 assets/swamp-tweaks/items/muddy_mycelium.json
 2f8dd987451a1e937661e257b8b7d5ed335d6096 assets/swamp-tweaks/items/muddy_podzol.json
 448b5ecec291f99356bb478ef84f5600e306cc3b assets/swamp-tweaks/items/potted_swamp_sapling.json
@@ -62,7 +62,7 @@ f3a32110be935322b0150138a3fec792c1586e84 assets/swamp-tweaks/models/block/swamp_
 d32e07953cfab4d7d8865596076a8f606fa1178b assets/swamp-tweaks/models/block/swamp_fence_inventory.json
 e80eb813a1a10aede0c89b48ed5ed3fd651d6fad assets/swamp-tweaks/models/block/swamp_fence_post.json
 39dd8213dd7f40ea474ad7bbd3c74f3ded6046da assets/swamp-tweaks/models/block/swamp_fence_side.json
-a33df522472b23ef2f025201b4858e36abe6337c assets/swamp-tweaks/models/block/swamp_hanging_sign.json
+51ec46ecc1b3a08e6719c98e1212fdde62d4a914 assets/swamp-tweaks/models/block/swamp_hanging_sign.json
 290578864e29bb80622d869d36de80f28dca3940 assets/swamp-tweaks/models/block/swamp_leaves.json
 03b4907726f1ded99ef583fa90ae9d62017fbe86 assets/swamp-tweaks/models/block/swamp_log.json
 b190db28f73b78a9d94aaeb829392e68ffcdc5bf assets/swamp-tweaks/models/block/swamp_log_horizontal.json

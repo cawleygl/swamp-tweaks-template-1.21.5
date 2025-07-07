@@ -51,7 +51,6 @@ processResources {
 		expand "version": inputs.properties.version
 	}
 
-	duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -75,10 +74,6 @@ jar {
 		rename { "${it}_${inputs.properties.archivesName}"}
 	}
 }
-
-//sourcesJar {
-//	duplicatesStrategy = DuplicatesStrategy.INCLUDE
-//}
 
 // configure the maven publication
 publishing {
